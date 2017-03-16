@@ -20,7 +20,11 @@ Few points to note:
   * In Knox gateway.sh script (knox-0.12.0/bin/gateway.sh) if you are using version less than Knox 0.12 then you might have to do some more updates.
     * APP_JAVA_LIB_PATH="-Djava.library.path=/lib/arm-linux-gnueabihf/“
   * Add the user you will be running Knox under to shadow group (I know it's bad but for now this works)
-    * sudo usermod -a -G shadow <knox-user>
+  
+   ```
+   sudo usermod -a -G shadow <knox-user>
+   
+   ```
 
 
 
