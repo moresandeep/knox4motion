@@ -1,6 +1,6 @@
 # knox4motion
 
-This repo provides some basic Knox configuration for motion (http://www.lavrsen.dk/foswiki/bin/view/Motion/). I am using this setup on my Raspberry Pi. 
+This repo provides some basic Knox configuration for [motion](http://www.lavrsen.dk/foswiki/bin/view/Motion/). I am using this setup on my Raspberry Pi. 
 Few points to note:
 
 1. Motion and Knox are running on the same host (hence the 'localhost' reference in the sandbox.xml for motion service)
