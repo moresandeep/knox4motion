@@ -1,0 +1,10 @@
+<rules>
+
+  <rule dir="IN" name="MOTION/motion/inbound" pattern="*://*:*/**/motion">
+    <rewrite template="{$serviceUrl[MOTION]}"/>
+  </rule>
+
+  <rule dir="IN" name="MOTION/motion/inbound/all" pattern="*://*:*/**/motion{**}">
+    <rewrite template="{$serviceUrl[MOTION]}"/>
+  </rule>
+</rules>

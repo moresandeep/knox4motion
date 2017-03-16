@@ -1,0 +1,20 @@
+<service role="MOTION" name="motion" version="0.0.1">
+<!--
+  <policies>
+        <policy role="webappsec"/>
+        <policy role="authentication" name="Anonymous"/>
+        <policy role="rewrite"/>
+        <policy role="authorization"/>
+  </policies>
+-->
+  <routes>
+    <route path="/motion">
+        <rewrite apply="MOTION/motion/inbound" to="request.url"/>
+    </route>
+
+    <route path="/motion**">
+        <rewrite apply="MOTION/motion/inbound/all" to="request.url"/>
+    </route>
+  </routes>
+  <dispatch classname="org.apache.hadoop.gateway.dispatch.PassAllHeadersDispatch"/>
+</service>
