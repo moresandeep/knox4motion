@@ -4,12 +4,14 @@ This repo provides some basic Knox configuration for motion (http://www.lavrsen.
 Few points to note:
 * Motion and Knox re running on the same host (hence the 'localhost' reference in the sandbox.xml for motion service)
 ** If you are running motion on a different machine (ideal) update the following section in the config/sandbox.xml
+
    ```
    <service>
        <role>MOTION</role>
        <url>http://my_hostname_or_ip:8081</url>
    </service>
    ``` 
+   
 ** Knox in this case uses linux PAM authenication as a result the Motion interface is secured by Basic authentication, so you can authenticate using the users configured on your machine i.e. if you are using Raspberry Pi you can login with user:password - pi:raspberry (if you did not change the default settings, in which case PLEASE change the password).
 ** Some housekeeping for PAM to work on Raspberry Pi (Raspbian) - you might not need if you are using Centos or RHEL
 *** cd /lib/arm-linux-gnueabihf
