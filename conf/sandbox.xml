@@ -179,7 +179,7 @@
         <url>http://localhost:8090</url>
     </service>
     
-    <!-- Service defination for motion -->
+    <!-- Service definition for motion -->
     <service>
         <role>MOTION</role>
         <url>http://localhost:8081</url>
