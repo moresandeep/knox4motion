@@ -80,6 +80,18 @@
             <enabled>true</enabled>
             <param><name>localhost</name><value>sandbox,sandbox.hortonworks.com</value></param>
         </provider>
+	    
+	<!-- Only authorize user knox -->
+        <provider>
+            <role>authorization</role>
+            <name>AclsAuthz</name>
+            <enabled>true</enabled>
+            <param>
+                 <name>motion.acl</name>
+		 <!-- if you have a different user update here -->
+                 <value>myuser;*;*</value>
+            </param>
+        </provider>
 
     </gateway>
     
